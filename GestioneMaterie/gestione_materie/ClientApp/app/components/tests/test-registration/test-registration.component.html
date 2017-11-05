@@ -1,0 +1,41 @@
+﻿    <div *ngIf="student,course" >
+    <div *ngIf="testDate">
+        <p>Registrazione Materia:</p>
+        <div class="container">
+            <form #registrationForm="ngForm" (ngSubmit)="registrationTest()">
+                <div class="form-group">
+                    <label for="teaching">Materia:</label>
+                    <input type="text" class="form-control" id="teaching"  name="teaching" [readonly]="true" [(ngModel)]="teaching" [(value)]="course.courseName" placeholder="{{course.courseName}}">
+
+                </div>
+                <div class="form-group">
+                    <label for="teacherName">Docente:</label>
+                    <input type="text" class="form-control" id="teacherName" name="teacherName" [readonly]="true" [(ngModel)]="teacherName" [(value)]="teacherName" placeholder="{{this.teacher.name}} {{this.teacher.surname}}">
+
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Data:</label>
+                    <input type="datetime-local" class="form-control" name="date" required [(ngModel)]="date"  #name="ngModel"/>
+                </div>
+             
+
+
+                <div class="form-group">
+                    <label for="requiredTopics">Domande:</label>
+                    <input type="text" class="form-control" id="requiredTopics" required name="requiredTopics" [(ngModel)]="requiredTopics" #visibility="ngModel">
+                </div>
+              
+                <div class="form-group">
+                    <label for="result">Voto:</label>
+                    <select class="form-control" id="result" required name="result" [(ngModel)]="result">
+                        <option *ngFor="let result of results" [value]="result" name="resultTest">{{result}}</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success" [disabled]="!registrationForm.form.valid">Conferma</button>
+            </form>
+        </div>
+    </div>
+</div>
+

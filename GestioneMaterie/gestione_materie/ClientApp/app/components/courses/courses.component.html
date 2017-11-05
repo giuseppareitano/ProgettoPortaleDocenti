@@ -1,0 +1,18 @@
+﻿<h1>Corsi</h1>
+
+<table class="table" popover="center">
+    <tr id="title">
+        <th></th>
+        <th>Nome</th>
+        <th>Crediti</th>
+        <th>Ore</th>    
+    </tr>
+    <tr *ngFor="let course of courses" [class.selected]="course === selectedCourse" (click)="onSelect(course)" >
+       <th><button class='glyphicon glyphicon-trash' (click)="deleteCourse(course.id)"></button></th>
+        <th><b>{{course.courseName}}</b></th>
+        <th>{{course.credits}}</th>
+        <th>{{course.hours}}</th>
+    </tr>
+</table>
+
+<course-option [course]="selectedCourse"></course-option>

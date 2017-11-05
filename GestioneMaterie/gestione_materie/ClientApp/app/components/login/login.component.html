@@ -1,0 +1,45 @@
+﻿<div  id="errorLog" *ngIf="errorLog" class="help-block">ERRORE: Email o password non valide!</div>
+
+<div>
+
+
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+       
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="email" required name="email" [(ngModel)]="email" #visibility="ngModel">
+            
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" required name="password" [(ngModel)]="password" #visibility="ngModel">
+        </div>
+
+       
+        <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Conferma</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -1,0 +1,19 @@
+﻿<div *ngIf="course">
+    <h1>{{course.courseName}}</h1>
+    <table class="table">
+        <tr id="title">
+            <th>Tipologia</th>
+            <th>Aula</th>
+            <th>Data</th>
+        </tr>
+        <tr *ngFor="let test of tests; let i=index" [routerLinkActive]="['link-active']" [routerLink]="['/test-detail',course.id,this.i]">
+            <th>{{test.description}}</th>
+            <th>{{test.classroom}}</th>
+            <th>{{test.date| date: 'dd/MM/yyyy'}}</th>
+        </tr>
+    </table>
+    <button [routerLinkActive]="['link-active']" [routerLink]="['/test-add',course.id]">Aggiungi Appello</button>
+</div>
+
+
+

@@ -1,0 +1,22 @@
+﻿
+<div class="container" >
+    <h1>Inserisci i dati dell'appello:</h1>
+    <form #testForm="ngForm" (ngSubmit)="saveTest()">
+         <div class="form-group">
+             <label for="classroom">Aula:</label>
+             <input type="text" class="form-control" id="classroom" required  name="classroom"  [(ngModel)]="classroom">
+             
+         </div>
+        <div class="form-group">
+            <label for="description">Tipologia:</label>
+            <select class="form-control" id="description" required  name="description" [(ngModel)]="description">
+                <option *ngFor="let desc of descriptions" [value]="desc"  name="typeTest" >{{desc}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date">Data:</label>
+            <input type="datetime-local" class="form-control" name="date" required [(ngModel)]="date"/>
+        </div>
+        <button type="submit" class="btn btn-success" >Conferma</button>
+    </form>
+</div>
