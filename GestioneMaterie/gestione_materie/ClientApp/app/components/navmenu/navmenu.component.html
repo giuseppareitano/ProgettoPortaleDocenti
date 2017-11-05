@@ -1,0 +1,33 @@
+<div class='main-nav'>
+    <div class='navbar navbar-inverse'>
+        <div class='navbar-header'>
+            
+            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Toggle navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            
+            <a class='navbar-brand' [routerLinkActive]="['link-active']" [routerLink]="['/home']">Bevenuto {{teacher.name}} {{teacher.surname}}</a>
+            <button (click)="logout()" [routerLinkActive]="['link-active']" [routerLink]="['/login']">Esci</button>
+
+                
+          
+        </div>
+        <div class='clearfix'></div>
+        <div class='navbar-collapse collapse'>
+            <ul class='nav navbar-nav'>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/students']">
+                        <span class='glyphicon glyphicon-user'></span> Elenco Studenti
+                    </a>
+                <li [routerLinkActive]="['link-active']">
+                    <a [routerLink]="['/courses']">
+                        <span class='glyphicon glyphicon-book'></span> Elenco Corsi
+                    </a>
+
+</ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿<div *ngIf="student">
+    <div class="card">
+        <div class="container">
+            <p>Nome:<b> {{student.name}}</b></p>
+            <p>Cognome: <b>{{student.surname}}</b></p>
+            <p>Data di Nascita: <b>{{student.dateOfBirth| date: 'dd/MM/yyyy'}}</b></p>
+            <p>Email: <b>{{student.email}}</b></p>
+        </div>
+    </div>
+
+    <table class="table">
+        <tr id="title">
+            <th>Insegnamento</th>
+            <th>Docente</th>
+            <th>Data Registrazione</th>
+            <th>Domande</th>
+            <th>Voto</th>
+        </tr>
+        <tr *ngFor="let registration of student.registrations">
+            <th>{{registration.teaching}}</th>
+            <th>{{registration.teacher}}</th>
+            <th>{{registration.dateOfRegistration}}</th>
+            <th>{{registration.requiredTopics}}</th>
+            <th>{{registration.result}}</th>
+        </tr>
+        </table>
+</div>

@@ -1,0 +1,32 @@
+﻿th, tr {
+    border: 0px solid black;
+    padding: 25px;
+    border-spacing: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+    tr:hover {
+        background-color: #80E27E;
+    }
+
+#title {
+    background-color: #4caf50;
+    color: white;
+}
+
+.selected {
+    background-color: #80E27E;
+}
+button {
+    background-color: #80E27E;
+    border: 2px solid #333333;
+    color: #333333;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+}

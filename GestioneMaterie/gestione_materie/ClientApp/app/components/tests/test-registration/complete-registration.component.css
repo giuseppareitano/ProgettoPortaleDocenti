@@ -1,0 +1,18 @@
+﻿#success {
+    margin: 100px;
+    padding: 50px;
+    background-color: #80E27E;
+    text-align: center;
+    color: #333333;
+    border: 2px solid #333333;
+    border-radius: 25px;
+    font-weight: bold;
+}
+#return {
+    
+    text-align: center;
+    color: #333333;
+    margin-top:-50px;
+    border-radius: 25px;
+    font-weight: bold;
+}

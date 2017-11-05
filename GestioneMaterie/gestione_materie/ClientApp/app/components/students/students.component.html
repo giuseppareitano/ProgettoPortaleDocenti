@@ -1,0 +1,26 @@
+﻿<h1>Studenti</h1>
+ <p>Elenco di tutti gli studenti:</p>
+    <table class="table">
+        <tr id="title">
+            <th>Cognome</th>
+            <th>Nome</th>
+           
+            <th>Email</th>
+            <th>Data di Nascita</th>
+        </tr>
+        <tr *ngFor="let student of students" [routerLinkActive]="['link-active']" [routerLink]="['/detail',student.id]">
+            <th><b>{{student.surname}}</b></th>
+            <th>{{student.name}}</th>
+            <th>{{student.email}}</th>
+            <th>{{student.dateOfBirth | date: 'dd/MM/yyyy'}}</th>
+            
+        </tr>
+        
+    </table>
+
+
+
+
+
+
+

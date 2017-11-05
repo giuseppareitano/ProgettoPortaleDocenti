@@ -1,0 +1,7 @@
+﻿<div *ngIf="course">
+
+<p>Corso selezionato: <b>{{course.courseName}}</b></p>    
+<button [routerLinkActive]="['link-active']" [routerLink]="['/tests',course.id]">Gestisci Appelli</button>
+<button [routerLinkActive]="['link-active']" [routerLink]="['/course-detail',course.id]">Studenti Iscritti</button>
+   
+</div>

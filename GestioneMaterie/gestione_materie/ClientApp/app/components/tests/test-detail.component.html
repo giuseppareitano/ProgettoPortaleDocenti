@@ -1,0 +1,20 @@
+﻿<h1 *ngIf="course">{{course.courseName}}</h1>
+<div *ngIf ="test">
+<h2 >Appello: {{test.date | date: 'dd/MM/yyyy'}}</h2>
+<p>Clicca su uno studente per convalidare la materia:</p>
+<table class="table">
+    <tr id="title">
+        <th>Cognome</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Data di Nascita</th>
+    </tr>
+    <tr *ngFor="let student of students" [class.selected]="student === selectedStudent" (click)="onSelect(student)">
+        <th>{{student.surname}}</th>
+        <th>{{student.name}}</th>
+        <th>{{student.email}}</th>
+        <th>{{student.dateOfBirth  | date: 'dd/MM/yyyy'}}</th>
+    </tr>
+</table>
+<test-registration  [student]="selectedStudent" [course]="course" [testDate]="test.date" ></test-registration>
+</div>

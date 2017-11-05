@@ -1,0 +1,27 @@
+﻿
+<div *ngIf="course" class="card">
+        <h3 id="name-course">{{course.courseName}}</h3>
+        <p>Crediti:<b>{{course.credits}}</b></p> 
+        <p>Ore:<b>{{course.hours}}</b></p>
+    </div>
+
+<h1>Studenti Iscritti</h1>
+
+<table class="table">
+    <tr id="title">
+      
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Email</th>
+        <th>Data di Nascita</th>
+    </tr>
+    <tr *ngFor="let student of students">
+       
+        <th>{{student.name}}</th>
+        <th>{{student.surname}}</th>
+        <th>{{student.email}}</th>
+        <th>{{student.dateOfBirth| date: 'dd/MM/yyyy'}}</th>
+
+    </tr>
+
+</table>
